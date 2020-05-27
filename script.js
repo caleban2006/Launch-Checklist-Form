@@ -8,15 +8,15 @@ window.addEventListener("load", function(event) {
 
       if (pilotNameInput.value === "" || copilotNameInput.value === "" || fuelLevelInput.value === "" || cargoMassInput.value === "") {
          alert("All fields are required!");
-         submit.preventDefault();
+         event.preventDefault();
       };
-         if (typeof (pilotNameInput.value) !== "string" || typeof (copilotNameInput.value) !== "string") {
+         if (pilotNameInput.value !== typeof string || copilotNameInput.value !== typeof string) {
          alert("Please enter a valid name!");
-         submit.preventDefault();
+         event.preventDefault();
       };
       if (isNaN(fuelLevelInput.value) === true || isNaN(cargoMassInput.value) === true) {
          alert("Please enter a valid number!");
-         submit.preventDefault();
+         event.preventDefault();
       };
 
       let faultyItems = document.getElementById("faultyItems");
